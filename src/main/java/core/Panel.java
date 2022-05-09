@@ -1,4 +1,4 @@
-package main;
+package core;
 
 import view.ViewController;
 import view.Position;
@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * JPanel, amit kirajzolunk a Frame-re
+ * JPanel, amit kirajzolunk a core.Frame-re
  */
 public class Panel extends JPanel {
 
@@ -35,7 +35,7 @@ public class Panel extends JPanel {
     boolean nem_interface=true;
 
     /**
-     * Panel konstruktora
+     * core.Panel konstruktora
      */
     public Panel(){
         cameraPos = new Position(0,0);

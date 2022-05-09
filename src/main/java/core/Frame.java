@@ -1,18 +1,14 @@
-package main;
+package core;
 
 import view.ViewController;
 import view.Position;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 /**
  * Létrehozza az ablakot
@@ -35,24 +31,12 @@ public class Frame extends JFrame{
     Thread threadStep;
 
     /**
-     * Ikon
-     */
-    BufferedImage img;
-
-    /**
      * Konstruktor
      */
     public Frame() {
         Panel panel = new Panel();
 
         this.add(panel);
-
-        try {
-            img = ImageIO.read(new File("icon.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        this.setIconImage(img);
 
         this.closed = false;
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

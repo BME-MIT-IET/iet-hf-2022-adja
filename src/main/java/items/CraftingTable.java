@@ -3,7 +3,7 @@ package items;
 import characters.Robot;
 import characters.Settler;
 import interfaces.Item;
-import main.Game;
+import core.Game;
 import materials.*;
 import places.Asteroid;
 import places.TeleportGate;

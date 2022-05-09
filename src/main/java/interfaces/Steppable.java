@@ -1,7 +1,7 @@
 package interfaces;
 
 /**
- * Ez egy interface. Az őt megvalósító osztályokat lépteti a Game.
+ * Ez egy interface. Az őt megvalósító osztályokat lépteti a core.Game.
  */
 public interface Steppable {
 
