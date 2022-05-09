@@ -1,14 +1,14 @@
-package main;
+package core;
 
 import view.ViewController;
 
 /**
- * Main osztály
+ * core.Main osztály
  */
 public class Main {
 
     /**
-     * Main függvény
+     * core.Main függvény
      * @param args: args
      */
     public static void main(String[] args){

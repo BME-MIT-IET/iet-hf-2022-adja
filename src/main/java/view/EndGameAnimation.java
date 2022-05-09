@@ -1,7 +1,7 @@
 package view;
 
-import main.Game;
-import main.GameState;
+import core.Game;
+import core.GameState;
 
 import java.awt.*;
 

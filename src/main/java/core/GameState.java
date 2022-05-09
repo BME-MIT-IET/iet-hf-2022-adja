@@ -1,4 +1,4 @@
-package main;
+package core;
 
 /**
  * A játék állapotát leíró enum

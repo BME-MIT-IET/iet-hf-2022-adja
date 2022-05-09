@@ -3,7 +3,7 @@ package places;
 import characters.Character;
 import interfaces.Item;
 import interfaces.Steppable;
-import main.Game;
+import core.Game;
 import view.TeleportGateView;
 
 /**

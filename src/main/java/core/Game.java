@@ -1,4 +1,4 @@
-package main;
+package core;
 
 import characters.Robot;
 import characters.Settler;
@@ -22,13 +22,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- *A Game osztály felelős a játék működéséért, ő tárolja kollektíven a játékban résztvevő
+ *A core.Game osztály felelős a játék működéséért, ő tárolja kollektíven a játékban résztvevő
  * entitásokat, valamint ő kérdezgeti a lépésre képes résztvevőit a játéknak, hogy mit csinálnak a
  * jelenlegi körben.
  */
 public class Game {
     /**
-     * A Game osztály egyetlen példánya
+     * A core.Game osztály egyetlen példánya
      */
     private static Game instance;
 
@@ -53,7 +53,7 @@ public class Game {
     private GameState gameState;
 
     /**
-     * Visszatér Game osztály egyetlen objetumával
+     * Visszatér core.Game osztály egyetlen objetumával
      * @return testgame: az egyetlen TestGame objektum
      */
     public static Game getInstance() {

@@ -1,6 +1,6 @@
 package characters;
 
-import main.Game;
+import core.Game;
 import materials.MaterialStorage;
 import places.Asteroid;
 import places.Place;

@@ -2,7 +2,7 @@ package characters;
 
 import items.CraftingTable;
 import items.Inventory;
-import main.Game;
+import core.Game;
 import materials.Material;
 import places.Asteroid;
 import places.Place;

@@ -1,6 +1,6 @@
 package characters;
 
-import main.Game;
+import core.Game;
 import places.Asteroid;
 import interfaces.Steppable;
 import places.Place;
