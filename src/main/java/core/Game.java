@@ -52,6 +52,8 @@ public class Game {
      */
     private GameState gameState;
 
+    private final Random random = new Random();
+
     /**
      * Visszatér core.Game osztály egyetlen objetumával
      * @return testgame: az egyetlen TestGame objektum
@@ -93,7 +95,6 @@ public class Game {
         craftingTable.AddRecipe(new Recipe(TeleportGate.class,
                 Stream.of(new Iron(), new Iron(), new WaterIce(), new Uranium()).collect(Collectors.toList())));
 
-        Random random = new Random();
         List<Position> positions = new ArrayList<>();
         List<Asteroid> asteroids = new ArrayList<>();
 
