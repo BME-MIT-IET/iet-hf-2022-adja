@@ -23,6 +23,8 @@ public class AsteroidBelt implements Steppable {
      */
     private final AsteroidBeltView view;
 
+    private final Random random = new Random();
+
     /**
      * Visszatér az AsteroidBelt osztály egyetlen objektumával
      * @return asteroidbelt: az egyetlen AsteroidBelt objektum
@@ -51,7 +53,6 @@ public class AsteroidBelt implements Steppable {
      */
     @Override
     public void Step() {
-        Random random = new Random();
         int rand = random.nextInt(5);
 
         if(rand == 0){
@@ -82,7 +83,6 @@ public class AsteroidBelt implements Steppable {
      * aszteroidamezőben található összes aszteroidának a NearSun metódusát.
      */
     private void NearSun() {
-        Random random = new Random();
         int numberOfAsteroidsInvolved = (int) (asteroids.size() * 0.2);
         int i = 0;
 
@@ -100,7 +100,6 @@ public class AsteroidBelt implements Steppable {
      * meghívja a napviharba kerület aszterodiáknak a SolarFlare metódusát.
      */
     private void SolarFlare() {
-        Random random = new Random();
         int numberOfAsteroidsInvolved = (int) (asteroids.size() * 0.2);
         int i = 0;
 
@@ -148,7 +147,6 @@ public class AsteroidBelt implements Steppable {
         if(components.size() <= 1)
             return;
 
-        Random random = new Random();
 
         for(int i = 0; i < components.size(); ++i){
             int componentIdx1, componentIdx2;
@@ -185,7 +183,6 @@ public class AsteroidBelt implements Steppable {
 
         Queue<Asteroid> queue = new LinkedList<>();
 
-        Random random = new Random();
         Asteroid s = remainingAsteroids.get(random.nextInt(remainingAsteroids.size()));
 
         visitedAsteroidMap.put(s, true);

@@ -66,6 +66,7 @@ public class Frame extends JFrame{
                     Thread.sleep(16);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    threadGui.interrupt();
                 }
             }
         });
@@ -78,6 +79,7 @@ public class Frame extends JFrame{
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    threadStep.interrupt();
                 }
             }
         });
@@ -111,6 +113,8 @@ public class Frame extends JFrame{
                 threadStep.join();
             } catch (InterruptedException interruptedException) {
                 interruptedException.printStackTrace();
+                threadGui.interrupt();
+                threadStep.interrupt();
             }
         }
 

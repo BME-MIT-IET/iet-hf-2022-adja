@@ -284,6 +284,7 @@ public class ViewController {
                 Thread.sleep(5000);
                 System.exit(0);
             } catch (Exception ignored) {
+                Thread.currentThread().interrupt();
             }
         }
     }
