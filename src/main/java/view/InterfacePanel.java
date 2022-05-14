@@ -343,6 +343,7 @@ public class InterfacePanel extends Drawable {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
         waitingSettler=currentWaitingSettler;
         stepped=false;
