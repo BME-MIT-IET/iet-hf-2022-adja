@@ -209,8 +209,7 @@ public class InterfacePanel extends Drawable {
             UraniumImg = ImageIO.read(new File("Textures/uran.png"));
             TeleportImg = ImageIO.read(new File("Textures/teleport.png"));
         }
-        catch (IOException ex){
-            ex.printStackTrace();
+        catch (IOException ignored){
         }
     }
 
