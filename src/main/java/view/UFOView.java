@@ -35,8 +35,8 @@ public class UFOView extends DrawableCharacter {
         try{
             img = ImageIO.read(new File("Textures/ufo.png"));
         }
-        catch (IOException ex){
-            ex.printStackTrace();
+        catch (IOException ignored){
+            //image file read in failed
         }
     }
 
