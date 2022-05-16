@@ -100,9 +100,8 @@ public class AsteroidView extends Drawable implements Clickable {
      * @param waitingSettlersAsteroid: inputra várakozó settler aszteroidája-e
      */
     public void Draw_Neighbours_and_Teleports(Graphics2D graphics, Position cameraPos, Position cursorPos, boolean check, boolean waitingSettlersAsteroid){
-        if(check){
-            if(!(Math.sqrt((pos.x + 30 - cameraPos.x - cursorPos.x) * (pos.x + 30 - cameraPos.x - cursorPos.x) +
-                    (pos.y + 30 - cameraPos.y - cursorPos.y) * (pos.y + 30 - cameraPos.y  - cursorPos.y)) < AsteroidView.asteroidRadius))
+        if(check && (Math.sqrt((pos.x + 30.0 - cameraPos.x - cursorPos.x) * (pos.x + 30.0 - cameraPos.x - cursorPos.x) +
+                (pos.y + 30.0 - cameraPos.y - cursorPos.y) * (pos.y + 30.0 - cameraPos.y  - cursorPos.y)) >= AsteroidView.asteroidRadius)){
                 return;
         }
         Color color = waitingSettlersAsteroid ? Color.WHITE : Color.CYAN;
@@ -254,7 +253,7 @@ public class AsteroidView extends Drawable implements Clickable {
      */
     @Override
     public boolean ClickedCheck(Position clickPos, Position cameraPos) {
-        double tes = Math.sqrt(Math.pow((clickPos.x - (pos.x + 45 - cameraPos.x)), 2) + Math.pow(clickPos.y - (pos.y + 40 - cameraPos.y), 2));
+        double tes = Math.sqrt(Math.pow((clickPos.x - (pos.x + 45.0 - cameraPos.x)), 2) + Math.pow(clickPos.y - (pos.y + 40.0 - cameraPos.y), 2));
         if (tes <= 35) {
             return true;
         }

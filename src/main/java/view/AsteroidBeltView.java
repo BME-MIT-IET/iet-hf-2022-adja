@@ -93,7 +93,7 @@ public class AsteroidBeltView extends Drawable {
         }
         if(nearSunHappening){
             graphics.setColor(new Color(1.0f, 0.369f, 0.075f));
-            int position= (int)((double)animationCounter*(vx/10)/(double)animationCounterMax)-vx;
+            int position= (int)(animationCounter*(vx/10.0)/animationCounterMax)-vx;
             graphics.fillOval(position, ViewController.getInstance().GetWindowSize().y/2-vy,2*vy,2*vy);
 
             graphics.setColor(new Color(255, 0, 0, 255));
