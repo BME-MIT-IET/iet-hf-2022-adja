@@ -64,6 +64,7 @@ public class AsteroidView extends Drawable implements Clickable {
             img= ImageIO.read(new File("Textures/aszteroida.png"));
         }
         catch (IOException ignored){
+            //image file read in failed
         }
     }
 

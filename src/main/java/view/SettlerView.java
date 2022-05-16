@@ -77,6 +77,7 @@ public class SettlerView extends DrawableCharacter implements Clickable {
             UraniumImg = ImageIO.read(new File("Textures/uran.png"));
         }
         catch (IOException ignored){
+            //images file read in failed
         }
 
         this.color = settlerColors.get(settlerViewCreationCounter);

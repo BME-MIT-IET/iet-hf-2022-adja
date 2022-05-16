@@ -36,6 +36,7 @@ public class RobotView extends DrawableCharacter {
             img= ImageIO.read(new File("Textures/robot.png"));
         }
         catch (IOException ignored){
+            //image file read in failed
         }
     }
 

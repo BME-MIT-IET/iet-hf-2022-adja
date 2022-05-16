@@ -210,6 +210,7 @@ public class InterfacePanel extends Drawable {
             TeleportImg = ImageIO.read(new File("Textures/teleport.png"));
         }
         catch (IOException ignored){
+            //image file read in failed
         }
     }
 
