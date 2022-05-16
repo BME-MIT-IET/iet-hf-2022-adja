@@ -107,7 +107,7 @@ public class Game {
                 p[1] = random.nextInt(2000 + 2000) - 2000;
 
                 // Magic constant a sugarhoz, azert nem 42 + 42 hogy kicsit tavolabb legyenek egymastol
-            } while (positions.stream().anyMatch(position -> Math.pow(p[0] - position.x, 2) + Math.pow(p[1] - position.y, 2) <= Math.pow(42 + 50, 2)));
+            } while (positions.stream().anyMatch(position -> Math.pow(p[0] - (double)position.x, 2) + Math.pow(p[1] - (double)position.y, 2) <= Math.pow(42.0 + 50.0, 2)));
 
             Position pos = new Position(p[0], p[1]);
             Asteroid ast = new Asteroid();
@@ -122,8 +122,8 @@ public class Game {
         for(Asteroid ast : asteroids) {
             List<Double> distances = asteroids.stream()
                     .map(asteroid ->
-                            Math.sqrt(Math.pow(positions.get(asteroids.indexOf(ast)).x - positions.get(asteroids.indexOf(asteroid)).x, 2) +
-                                      Math.pow(positions.get(asteroids.indexOf(ast)).y - positions.get(asteroids.indexOf(asteroid)).y, 2)))
+                            Math.sqrt(Math.pow(positions.get(asteroids.indexOf(ast)).x - (double)positions.get(asteroids.indexOf(asteroid)).x, 2) +
+                                      Math.pow(positions.get(asteroids.indexOf(ast)).y - (double)positions.get(asteroids.indexOf(asteroid)).y, 2)))
                     .collect(Collectors.toList());
 
             final List<Double> distancesCopy = new ArrayList<>(distances);
