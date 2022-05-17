@@ -1,5 +1,0 @@
-# Created at 2022-05-17T16:19:23.577
-Boot Manifest-JAR contains absolute paths in classpath 'D:\BME\6.Felev\IntegraciosEsEllenorzesiTechnikak\iet-hf-2022-adja\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

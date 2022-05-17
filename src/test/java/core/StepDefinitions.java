@@ -16,14 +16,19 @@ import view.ViewController;
 import static org.junit.jupiter.api.Assertions.*;
 
 class IsItMoveing{
-    static String isItMoveing(boolean moved){
+    static String isItMoveingToNull(boolean moved){
         if (moved)
-            return "Moved Successfully";
+            return "moved somewhere";
         else
-            return "Not Moved";
+            return "not moved";
     }
 
-
+    static String isItMoveingToNotNeighbour(boolean moved){
+        if (moved)
+            return "moved there";
+        else
+            return "stay still";
+    }
 }
 
 public class StepDefinitions {
@@ -33,7 +38,7 @@ public class StepDefinitions {
     Asteroid startAsteroid;
     Asteroid anotherAsteroid;
     Settler player;
-    String answer_1, answer_2;
+    String answer;
 
     @Given("an asteroid")
     public void anAsteroid() {
@@ -41,30 +46,45 @@ public class StepDefinitions {
         startAsteroid.SetView(new AsteroidView(startAsteroid,new Position(0,0),1));
         ViewController.getInstance().AddAsteroidView(startAsteroid,new Position(0,0));
         AsteroidBelt.getInstance().AddAsteroid(startAsteroid);
-        //game.AddAsteroid(startAsteroid);
     }
 
-    @Given("a player")
+    @Given("a player on it")
     public void aPlayer() {
         player = new Settler(startAsteroid);
         game.AddSettler(player);
         game.AddSteppable(player );
     }
 
-    @When("I ask the player to move")
+    @When("I ask the player to move into void")
     public void iAskToMoveIt() {
         game.NextStep();
-        answer_1 = IsItMoveing.isItMoveing(player.Move(null));
-        boolean t = ViewController.getInstance().GetCurrentSettlerWaitingForInput().GetAsteroid().GetNeighboringAsteroids().contains(new Asteroid());
-        answer_2 = IsItMoveing.isItMoveing(player.Move(new Asteroid()) && t);
+        answer = IsItMoveing.isItMoveingToNull(player.Move(null));
     }
 
-    @Then("I should be told {string}")
+    @Then("the player should be {string}")
     public void iShouldBeTold(String arg0) {
-        assertEquals(arg0, answer_1);
-
-        assertEquals(arg0, answer_2);
+        assertEquals(arg0, answer);
     }
 
+    @Given("an another asteroid")
+    public void anAnotherAsteroid() {
+        anotherAsteroid = new Asteroid();
+        anotherAsteroid.SetView(new AsteroidView(anotherAsteroid,new Position(0,0),1));
+        ViewController.getInstance().AddAsteroidView(anotherAsteroid,new Position(0,0));
+        AsteroidBelt.getInstance().AddAsteroid(anotherAsteroid);
+    }
+
+    @When("I ask the player to move there")
+    public void iAskThePlayerToMoveThere() {
+        game.NextStep();
+        boolean t = ViewController.getInstance().GetCurrentSettlerWaitingForInput().GetAsteroid().GetNeighboringAsteroids().contains(new Asteroid());
+        answer = IsItMoveing.isItMoveingToNotNeighbour(player.Move(new Asteroid()) && t);
+    }
+
+
+    @Then("the player {string}")
+    public void thePlayer(String arg0) {
+        assertEquals(arg0, answer);
+    }
 
 }
