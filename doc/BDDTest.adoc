@@ -1,0 +1,20 @@
+= BDD tesztek beüzemelése, és tesztek megírása
+
+Kezdetben beüzemeltük a Cucumbert, hogy működjön egy iskolapélda tesztelésére.
+Majd a dokumentációját tovább olvasva négy tesztesetet írtunk a mozgással kapcsolatban.
+
+A tesztek írása közben, mivel a Sonar-ral nem működött együtt jól a Cucumber.
+Ezért a JaCoCo-val a kódlefedettséget megmértük, amelyet már a Sonar is értelmezni tudott.
+
+== Beüzemelés
+
+* Cucumber működése lokálisan
+* Cucumber működése a GitHub kiértékelő rendszerében
+* SonarCloud Code Smell-jei és Code Coverage javítása
+
+== Tesztek megírása
+
+* Cucumber dokumentációjának olvasása
+* Dokumentációjából megérteni a tesztek nyelvezetét
+* Tesztek megírása, lefuttatása
+* Projekt megértése, teleport teszt megírása
