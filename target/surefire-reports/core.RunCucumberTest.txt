@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: core.RunCucumberTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.598 s <<< FAILURE! - in core.RunCucumberTest
-Is it moving?.Is it moving? - We can move, if the target asteroid is a neighbour  Time elapsed: 0.024 s  <<< ERROR!
-java.lang.NullPointerException
-	at core.StepDefinitions.aNeighbourAsteroid(StepDefinitions.java:95)
-	at ✽.a neighbour asteroid(classpath:core/Move.feature:25)
-

@@ -142,7 +142,6 @@ public class Game {
         }
 
         AsteroidBelt.getInstance().MakeItConnected();
-        AsteroidBelt.getInstance().MakeItConnected();
 
         int numOfUFOs = random.nextInt(20 - 5) + 5;
         for(int i = 0; i < numOfUFOs; i++) {

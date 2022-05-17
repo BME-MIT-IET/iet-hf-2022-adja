@@ -1,9 +1,6 @@
 package core;
 
 import characters.Settler;
-import interfaces.Steppable;
-import io.cucumber.java.ParameterType;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -33,7 +30,7 @@ class IsItMoving{
 
 }
 
-public class StepDefinitions {
+public class StepDefinitionsMove {
 
     Asteroid startAsteroid, anotherAsteroid, neighbourAsteroid;
     Settler player;

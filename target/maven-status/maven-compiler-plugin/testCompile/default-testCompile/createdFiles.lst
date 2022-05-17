@@ -1,3 +1,5 @@
 core\IsItMoving.class
-core\StepDefinitions.class
-core\RunCucumberTest.class
+core\StepDefinitionsMove.class
+places\StepDefinitionsTeleport.class
+places\RunTeleportTest.class
+core\RunMoveTest.class

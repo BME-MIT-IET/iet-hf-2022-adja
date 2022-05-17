@@ -1,5 +1,5 @@
-Feature: Is it moving?
-  Everybody wants to move from an asteroid to another  
+Feature: Moving
+  Everybody wants to move from an asteroid to another
 
   Scenario: We can't move if there are no neighbour asteroid
     Given an asteroid
@@ -13,6 +13,7 @@ Feature: Is it moving?
     Given an another asteroid
     When I ask the player to move there
     Then the player "stay still"
+    Then the player should be2 "oks"
 
   Scenario: We can move, if the target asteroid is a neighbour
     Given an asteroid
