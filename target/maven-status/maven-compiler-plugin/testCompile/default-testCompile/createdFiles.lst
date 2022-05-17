@@ -1,5 +1,0 @@
-core\IsItMoving.class
-core\StepDefinitionsMove.class
-places\StepDefinitionsTeleport.class
-places\RunTeleportTest.class
-core\RunMoveTest.class
