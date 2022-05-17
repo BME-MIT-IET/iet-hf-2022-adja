@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber"})
 //@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 //@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "core")
-public class RunCucumberTest {
+public class RunCucumberTest{
 }
 
 

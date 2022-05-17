@@ -2,11 +2,13 @@ package core;
 
 import characters.Settler;
 import interfaces.Steppable;
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import places.Asteroid;
+import places.AsteroidBelt;
 import view.AsteroidView;
 import view.Position;
 import view.ViewController;
@@ -20,12 +22,16 @@ class IsItMoveing{
         else
             return "Not Moved";
     }
+
+
 }
 
 public class StepDefinitions {
 
+
     Game game = new Game();
     Asteroid startAsteroid;
+    Asteroid anotherAsteroid;
     Settler player;
     String answer_1, answer_2;
 
@@ -34,7 +40,8 @@ public class StepDefinitions {
         startAsteroid = new Asteroid();
         startAsteroid.SetView(new AsteroidView(startAsteroid,new Position(0,0),1));
         ViewController.getInstance().AddAsteroidView(startAsteroid,new Position(0,0));
-        game.AddAsteroid(startAsteroid);
+        AsteroidBelt.getInstance().AddAsteroid(startAsteroid);
+        //game.AddAsteroid(startAsteroid);
     }
 
     @Given("a player")
@@ -58,4 +65,6 @@ public class StepDefinitions {
 
         assertEquals(arg0, answer_2);
     }
+
+
 }
