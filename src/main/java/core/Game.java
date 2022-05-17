@@ -162,7 +162,7 @@ public class Game {
      * Végrehajtja a következő lépést
      */
     public void NextStep(){
-        if(steppablesLeftinRound.size() == 0){
+        if(steppablesLeftinRound.isEmpty()){
             steppablesLeftinRound.addAll(allSteppables);
         }
 
@@ -199,7 +199,7 @@ public class Game {
      * @return SETTLERSLOST: a telepesek vesztettek, SETTLERSWON: a telepesek nyertek, NOTENDED: még nem ért véget
      */
     public GameState CheckGameStatus() {
-        if(this.settlers.size() == 0)
+        if(this.settlers.isEmpty())
             return GameState.SETTLERSLOST;
         Map<Asteroid, Map<Class<? extends Material>, Integer>> asteroidMaterialAmounts = new HashMap<>();
 
