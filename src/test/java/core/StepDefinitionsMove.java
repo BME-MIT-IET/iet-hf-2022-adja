@@ -27,7 +27,6 @@ class IsItMoving{
             return "stay still";
     }
 
-
 }
 
 public class StepDefinitionsMove {
@@ -47,7 +46,6 @@ public class StepDefinitionsMove {
 
     @Given("a player on it")
     public void aPlayer() {
-           view = ViewController.getInstance()    ;
         player = new Settler(startAsteroid);
     }
 

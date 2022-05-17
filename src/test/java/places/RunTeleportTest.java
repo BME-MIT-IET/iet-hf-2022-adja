@@ -16,7 +16,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @SelectClasspathResource("places")
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber"})
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "places  ")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "places")
 public class RunTeleportTest {
 }
 
