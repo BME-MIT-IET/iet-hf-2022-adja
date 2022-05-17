@@ -291,6 +291,12 @@ public class Game {
     }
 
     /**
+     * Hozzáad egy aszteroidát a nyilvántartásba.
+     * @param asteroid: a hozzáadandó aszteroida
+     */
+    public void AddAsteroid(Asteroid asteroid) {AsteroidBelt.getInstance().AddAsteroid(asteroid);}
+
+    /**
      *  Eltávolítja a paraméterként kapott settler-t a
      * settlerek nyilvántartásából.
      * @param settler: az eltávolítandó settler

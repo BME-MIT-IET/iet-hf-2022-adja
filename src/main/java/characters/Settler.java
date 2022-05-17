@@ -59,10 +59,11 @@ public class Settler extends MiningCharacter {
 
     @Override
     public boolean Move(Place place) {
+        if (place==null)
+            return false;
         Asteroid currentAsteroid = this.asteroid;
         if(place.Move(this)){
             currentAsteroid.TakeOff(this);
-
             this.view.CharacterMoved(currentAsteroid, this.asteroid);
 
             return true;
