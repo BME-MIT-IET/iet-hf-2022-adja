@@ -11,6 +11,9 @@ local.properties
 .loadpath
 .recommenders
 
+# test
+target\
+
 # External tool builders
 .externalToolBuilders/
 
@@ -198,3 +201,7 @@ fabric.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+target/surefire-reports/places.RunTeleportTest.txt
+target/surefire-reports/core.RunMoveTest.txt
+target/surefire-reports/TEST-core.RunMoveTest.xml
+target/surefire-reports/TEST-places.RunTeleportTest.xml
