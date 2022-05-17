@@ -3,7 +3,7 @@
 A kódot átnéztük, megvizsgáltuk errorokat szerencsére nem találtunk és az alkalmazás is futott, de találtunk pár helyen kisebb hibákat, például a nem platform specifikus elnevezések (camelCase-ek) használatát egyből észrevettük.
 
 ## Statikus analízis
-A statikus analízis elvégézésre SonarCloudot használtunk amit amár meglévő github actionshöz adtunk hozzá a gyakorlaton ismertett módon.
+A statikus analízis elvégézésre SonarCloudot használtunk amit a már meglévő github actions-höz adtunk hozzá a gyakorlaton ismertetett módon.
 
 A projekthez való hozzádása után ezeket az értékeket mutatta a játékról:
 ![](../doc/img/RégiSonar.png)
@@ -29,9 +29,9 @@ Azért javíttuk inkább ezeket, mert ezeknek nagyobb jelentőségük volt a pro
 
 
 ### Kijavított - átnézett code-smellek :
-1. Collection.size() == 0 helyett Collection.isEmpty() - re cseréltük mivel egyfelöl olvashatóbb lett így a kodunk
+1. Collection.size() == 0 feltételt Collection.isEmpty() - re cseréltük, mivel, egyfelöl olvashatóbb lett így a kódunk
 másfelől meg a komplexitása az isEmpty() metodusnak O(1) míg a size()-nak lehet O(n) is.
-2. Nagyon sok code-smell (kb 50-100 db) a nem megfelelő platform specifikus elnevezések miatt volt ezeket nem javítottuk csak megjegyeztük hogy a jővőben erre jobban oda figyelünk majd
+2. Nagyon sok code-smell (kb 50-100 db) a nem megfelelő platform specifikus elnevezések miatt volt ezeket nem javítottuk csak megjegyeztük, hogy a jővőben erre jobban oda figyelünk majd.
 
 ##Javitás utáni kép SonarCloudról:
 ![](../doc/img/UjSonar.png)
