@@ -33,6 +33,7 @@ Azért javíttuk inkább ezeket, mert ezeknek nagyobb jelentőségük volt a pro
 másfelől meg a komplexitása az isEmpty() metodusnak O(1) míg a size()-nak lehet O(n) is.
 2. Nagyon sok code-smell (kb 50-100 db) a nem megfelelő platform specifikus elnevezések miatt volt ezeket nem javítottuk csak megjegyeztük, hogy a jővőben erre jobban oda figyelünk majd.
 
-##Javitás utáni kép SonarCloudról:
+
+## Javitás utáni kép SonarCloudról:
 ![](../doc/img/UjSonar.png)
 
