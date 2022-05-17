@@ -5,4 +5,4 @@ Feature: Is it moving?
     Given an asteroid
     Given a player
     When I ask the player to move
-    Then I should be told "Not Moved"
+    Then I should be told "Not Moved2"
