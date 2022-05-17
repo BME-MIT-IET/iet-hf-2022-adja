@@ -7,7 +7,6 @@
     <properties>
         <sonar.organization>bme-mit-iet-org</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.sources>pom.xml,src/main/java,src/main/resources,src/test/resources/features</sonar.sources>
     </properties>
 
     <dependencyManagement>
@@ -79,21 +78,23 @@
                     <target>10</target>
                 </configuration>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M6</version>
                 <configuration>
                     <properties>
-                        <!-- Work around. Surefire does not include enough
+                        Work around. Surefire does not include enough
                              information to disambiguate between different
-                             examples and scenarios. -->
+                             examples and scenarios.
                         <configurationParameters>
                             cucumber.junit-platform.naming-strategy=long
                         </configurationParameters>
                     </properties>
                 </configuration>
             </plugin>
+            -->
         </plugins>
     </build>
 
