@@ -1,11 +1,6 @@
 Feature: Is it moving?
   Everybody wants to move from an asteroid to another
 
-  Given these asteroids:
-    | start |
-    | not neighbour |
-    | neighbour |
-
   Scenario: We can't move if there are no neighbour asteroid
     Given an asteroid
     Given a player on it
@@ -18,3 +13,10 @@ Feature: Is it moving?
     Given an another asteroid
     When I ask the player to move there
     Then the player "stay still"
+
+  Scenario: We can move, if the target asteroid is a neighbour
+    Given an asteroid
+    Given a player on it
+    Given a neighbour asteroid
+    When I ask the player to move to the neighbour
+    Then the player "moved there"
