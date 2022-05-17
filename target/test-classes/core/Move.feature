@@ -13,7 +13,6 @@ Feature: Moving
     Given an another asteroid
     When I ask the player to move there
     Then the player "stay still"
-    Then the player should be2 "oks"
 
   Scenario: We can move, if the target asteroid is a neighbour
     Given an asteroid

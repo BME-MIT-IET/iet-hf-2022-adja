@@ -11,6 +11,9 @@ local.properties
 .loadpath
 .recommenders
 
+# test
+target/surefire-reports
+
 # External tool builders
 .externalToolBuilders/
 

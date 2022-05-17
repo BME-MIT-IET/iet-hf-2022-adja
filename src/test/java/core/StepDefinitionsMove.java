@@ -32,6 +32,7 @@ class IsItMoving{
 
 public class StepDefinitionsMove {
 
+    ViewController view;
     Asteroid startAsteroid, anotherAsteroid, neighbourAsteroid;
     Settler player;
     String answer;
@@ -46,6 +47,7 @@ public class StepDefinitionsMove {
 
     @Given("a player on it")
     public void aPlayer() {
+           view = ViewController.getInstance()    ;
         player = new Settler(startAsteroid);
     }
 
