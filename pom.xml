@@ -7,6 +7,7 @@
     <properties>
         <sonar.organization>bme-mit-iet-org</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.sources>pom.xml,src/main/java,src/main/resources,src/test/resources/features</sonar.sources>
     </properties>
 
     <dependencyManagement>
