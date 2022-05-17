@@ -42,11 +42,6 @@ public class StepDefinitionsTeleport {
         tableAsteroids.put(arg0,temp);
     }
 
-    @Then("the player should be2 {string}")
-    public void iShouldBeTold(String arg0) {
-        assertEquals(arg0, "oks");
-    }
-
     @Given("a player on asteroid {string}")
     public void aPlayerOnAsteroid(String arg0) {
         player = new Settler(tableAsteroids.get(arg0));
@@ -91,10 +86,10 @@ public class StepDefinitionsTeleport {
     @Then("the player {string} asteroid {string}")
     public void thePlayerAsteroid(String arg0, String arg1) {
         if (!moved){
-            assertEquals(arg0,"stays on");
+            assertEquals("stays on",arg0);
             assertEquals(player.GetAsteroid(),tableAsteroids.get(arg1));
         } else {
-            assertEquals(arg0, "moved to");
+            assertEquals("moved to",arg0);
             assertEquals(player.GetAsteroid(),tableAsteroids.get(arg1));
         }
         moved = false;
