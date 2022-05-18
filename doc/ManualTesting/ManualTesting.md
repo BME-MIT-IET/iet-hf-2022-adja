@@ -4,7 +4,7 @@ Egy játéknál elengedhetelen a manuális tesztelés a maximális felhasználó
 
 ## Funkciók tesztelése
 
-###Tesztek:
+### Tesztek:
 
 * [Infobox megjelenítése](#infobox-megjelentse)
 * [Elérhető útvonalak megjelenítése](#elrhet-tvonalak-megjelentse)
