@@ -100,7 +100,7 @@ Utána:
 
 ### Teleport elhelyezése
 
-Nem csinál semmit 🥴
+Lehelyezzük a teleportkapu párt két külön aszteroidán. Ekkor megnyílik sötétkéken egy útvonal a két aszteroida között.
 
 Előtte:
 
@@ -108,7 +108,7 @@ Előtte:
 
 Utána:
 
-![](teleport_before.png)
+![](teleport_after.png)
 
 ### Telepesek győznek
 
