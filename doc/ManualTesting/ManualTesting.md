@@ -5,15 +5,16 @@ Egy játéknál elengedhetelen a manuális tesztelés a maximális felhasználó
 ## Funkciók tesztelése
 
 ###Tesztek:
-- [Infobox megjelenítése](#infobox-megjelentse)
-- [Elérhető útvonalak megjelenítése](#elrhet-tvonalak-megjelentse)
-- [Mozgás](#mozgs)
-- [Fúrás](#frs)
-- [Bányászás](#bnyszs)
-- [Craftolás](#craftols)
-- [Anyag visszahelyezése](#anyag-visszahelyezse)
-- [Teleport elhelyezése](#teleport-elhelyezse)
-- [Telepesek győznek](#telepesek-gyznek)
+
+* [Infobox megjelenítése](#infobox-megjelentse)
+* [Elérhető útvonalak megjelenítése](#elrhet-tvonalak-megjelentse)
+* [Mozgás](#mozgs)
+* [Fúrás](#frs)
+* [Bányászás](#bnyszs)
+* [Craftolás](#craftols)
+* [Anyag visszahelyezése](#anyag-visszahelyezse)
+* [Teleport elhelyezése](#teleport-elhelyezse)
+* [Telepesek győznek](#telepesek-gyznek)
 
 ### Infobox megjelenítése
 Ha rákattintunk egy tetszőleges aszteroidára megjelennek róla az információk olvashatóan és szépen. Jól látszik, ha még nincsenek kifúrva a rétegek nem látjuk az aszteroidában rejlő anyagot.
