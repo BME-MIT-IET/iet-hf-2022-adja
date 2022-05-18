@@ -24,14 +24,14 @@ public class StepDefinitionsDrill {
     Settler player;
     String answer;
 
-    @Given("an asteroid")
+    @Given("an asteroid with thickness")
     public void an_asteroid() {
         asteroid = new Asteroid();
         asteroid.SetView(new AsteroidView(asteroid,new Position(0,0),1));
         ViewController.getInstance().AddAsteroidView(asteroid,new Position(0,0));
         AsteroidBelt.getInstance().AddAsteroid(asteroid);
     }
-    @Given("a player on it")
+    @Given("a player")
     public void a_player_on_it() {
         player = new Settler(asteroid);
     }
@@ -40,7 +40,7 @@ public class StepDefinitionsDrill {
         boolean success = player.Drill();
         answer = IsItDrilling.isItDrilling(success);
     }
-    @Then("the player should be {string}")
+    @Then("the player is {string}")
     public void the_player_should_be(String string) {
         assertEquals(string,answer);
     }
