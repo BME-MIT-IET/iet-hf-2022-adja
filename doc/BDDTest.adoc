@@ -1,7 +1,7 @@
 = BDD tesztek beüzemelése, és tesztek megírása
 
 Kezdetben beüzemeltük a Cucumbert, hogy működjön egy iskolapélda tesztelésére.
-Majd a dokumentációját tovább olvasva négy tesztesetet írtunk a mozgással kapcsolatban.
+Majd a dokumentációját tovább olvasva négy tesztesetet írtunk a mozgással és kettőt a furással kapcsolatban.
 
 A tesztek írása közben, mivel a Sonar-ral nem működött együtt jól a Cucumber.
 Ezért a JaCoCo-val a kódlefedettséget megmértük, amelyet már a Sonar is értelmezni tudott.

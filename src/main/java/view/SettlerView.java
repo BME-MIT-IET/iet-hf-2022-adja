@@ -10,8 +10,6 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-import java.util.List;
 
 /**
  * Telepes kirajzolására szolgáló osztály
@@ -39,11 +37,6 @@ public class SettlerView extends DrawableCharacter implements Clickable {
     private Image CoalImg, IronImg, WaterIceImg, UraniumImg;
 
     /**
-     * Lehetséges megkülönböztető színek
-     */
-    private static final List<Color> settlerColors;
-
-    /**
      * Létrehozott telepesek számlálója
      */
     private static int settlerViewCreationCounter;
@@ -55,7 +48,6 @@ public class SettlerView extends DrawableCharacter implements Clickable {
 
     static{
         settlerViewCreationCounter = 0;
-        settlerColors = new ArrayList<>(Arrays.asList(Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.WHITE));
         font = new Font("Dialog",Font.PLAIN,12);
     }
 
@@ -80,8 +72,8 @@ public class SettlerView extends DrawableCharacter implements Clickable {
             //images file read in failed
         }
 
-        this.color = settlerColors.get(settlerViewCreationCounter);
         ++settlerViewCreationCounter;
+        this.color = new Color((settlerViewCreationCounter*49) % 255,(settlerViewCreationCounter*176) % 255, (settlerViewCreationCounter*201) % 255);
     }
 
     /**
