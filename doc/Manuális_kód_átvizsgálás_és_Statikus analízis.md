@@ -5,7 +5,10 @@ A kódot átnéztük, megvizsgáltuk errorokat szerencsére nem találtunk és a
 ## Statikus analízis
 A statikus analízis elvégézésre SonarCloudot használtunk amit a már meglévő github actions-höz adtunk hozzá a gyakorlaton ismertetett módon.
 
-A projekthez való hozzádása után ezeket az értékeket mutatta a játékról:
+![](../doc/img/ActionsWithSonar.png)
+
+
+A projekthez való hozzádása után a SonarCloud ezeket az értékeket mutatta a játékról:
 ![](../doc/img/RégiSonar.png)
 
 22 bug-ot és 18 Security Hotspot-ot talált a kiértékelő ezeket mind kijavítottuk és pár darab code smell-t is ezeken felül.
